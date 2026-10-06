@@ -59,9 +59,9 @@ int main() {
         return 1;
     }
 
-    // Вычисление beta по исходной формуле
+    // Вычисление beta
     beta = sqrt(10.0 * (pow(x, 1.0 / 3.0) + pow(x, y + 2.0)))
-           * (pow(asin(z), 2.0) - fabs(x - y));
+           * (fabs(x - y) - pow(asin(z), 2.0));
 
     printf("Beta = %.6lf\n", beta);
 
